@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML desde cero - Clase 7: formularios</title>
+    <style>
+        div {
+            margin-bottom: 10px
+        }
+    </style>
+</head>
+<body>
+    <!-- Estructura básica de un formulario  HTML-->
+    <h1>Déjanos tus segerencias</h1>
+    <form action="form.html">
+        <fieldset>
+            <legend>Tus datos personales</legend>
+        <div>
+            <label>Tu nombre
+                <input name="username" value="Ociel Gudiño" readonly>
+            </label>
+        </div>
+        <div>
+            <label for="email">Tu correo</label>
+            <input  id=email name="email">
+        </div>
+        </fieldset>
+        <fieldset>
+            <legend>Tu mensaje</legend>
+        <div>
+            <label for="message">Déjanos tu mensaje</label><br>
+            <textarea id="message" name="massage" cols="50" rows="3">
+            </textarea>
+        </div>
+        </fieldset>
+        <fieldset>
+            <legent>Tipos de input</legent>
+            <div>
+                <label>
+                    Number
+                    <input type="number">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Date
+                    <input type="date">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Email
+                    <input type="email">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Tel
+                    <input type="tel">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Color
+                    <input type="color">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Password
+                    <input type="password">
+                </label>
+            </div>
+            <div>
+                <label>
+                    Range
+                    <input type="range" min="0" max="10" step="2" value="0">
+                </label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Tus aficiones (puedes elegir más de una)</legend>
+            <div>
+                <label>
+                <input checked type="checkbox" name="aficiones" value="cine">
+                Cine
+                </label>
+            </div>
+            <div>
+                <label>
+                <input checked type="checkbox" name="aficiones" value="musica">
+                Música
+                </label>
+            </div>
+            <div>
+                <label>
+                <input type="checkbox" name="aficiones" value="comida">
+                Comida
+                </label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Tu sexo (Radio <button></button></legend>
+            <div>
+                <label>
+                    <input name="gender"type="radio">
+                    Hombre
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input name="gender"type="radio">
+                    Mujer
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input checked name="gender"type="radio">
+                    N/A
+                </label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Selecciona tu pais (Select) </legend>
+            <select name="" id="">
+                <optgroup label="sudamérica">
+                    <option value="col"> colombia</option>
+                    <option value="bo"select> bolovia</option>
+                    <option value="pe"> perú</option>
+                </optgroup>
+                <optgroup label="norteamerica">
+                    <option value="mx"> méxico</option>
+                </optgroup>
+            </select>
+        </fieldset>
+        <fieldset>
+            <input type="list" list="country-list">
+            <datalist id="country-list">
+                <option value="México"> </option>
+                <option value="Colombia"> </option>
+                <option value="Perú"> </option>
+                <option value="Argentina"> </option>
+                <option value="Brasil"> </option>
+                <option value="Chile"> </option>
+                <option value="Españaa"> </option>
+            </datalist>
+        </fieldset>
+
+        <!-- <button>Enviar</button> -->
+        <input type="submit" value="Enviar">
+
+        <!--
+            Atributos en los formularios
+
+            placeholder
+            type
+            required
+            readonly
+            autocomplete="on|off" (de la etiqueta form)
+            checked (checkbox y radio)
+            selected (select)
+        -->
+    </form>
+</body>
+</html>
